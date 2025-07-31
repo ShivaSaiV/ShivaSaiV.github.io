@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shiva Sai Vummaji - Portfolio</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Sora -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" xintegrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         /* Custom styles */
@@ -79,11 +76,13 @@
         .timeline-container.right { left: 50%; }
         .timeline-container::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: #000; border: 4px solid #2dd4bf; top: 25px; border-radius: 50%; z-index: 1; }
         .timeline-container.right::after { left: -10px; }
+        
+        /* UPDATED: Timeline for mobile */
         @media screen and (max-width: 768px) {
-            .timeline::after { left: 31px; }
-            .timeline-container { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .timeline::after { left: 25px; }
+            .timeline-container { width: 100%; padding-left: 55px; padding-right: 15px; }
             .timeline-container.left, .timeline-container.right { left: 0%; }
-            .timeline-container.left::after, .timeline-container.right::after { left: 21px; }
+            .timeline-container.left::after, .timeline-container.right::after { left: 15px; }
         }
         
         /* New Skills Section Styles */
@@ -141,15 +140,13 @@
         .project-card:hover::before {
             opacity: 1;
         }
-
     </style>
 </head>
 <body class="w-full">
 
-    <!-- Header & Navigation -->
     <header id="home" class="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-lg border-b border-gray-800/50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold main-accent-text">Shiva Sai Vummaji</a>
+            <a href="#" class="text-xl md:text-2xl font-bold main-accent-text">Shiva Sai Vummaji</a>
             <nav class="hidden md:flex space-x-8">
                 <a href="#" class="text-gray-300 hover:text-sky-300 transition-colors duration-300">Home</a>
                 <a href="#about" class="text-gray-300 hover:text-sky-300 transition-colors duration-300">About</a>
@@ -162,7 +159,6 @@
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="#" class="block py-2 text-gray-300 hover:text-sky-300">Home</a>
             <a href="#about" class="block py-2 text-gray-300 hover:text-sky-300">About</a>
@@ -174,19 +170,18 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-0">
             <div class="blob blob-1"></div>
             <div class="blob blob-2"></div>
-            <div class="floating-tag" style="top: 20%; left: 15%; animation-delay: 0s;">Machine Learning</div>
-            <div class="floating-tag" style="top: 30%; right: 10%; animation-delay: -5s;">Artificial Intelligence</div>
-            <div class="floating-tag" style="bottom: 25%; left: 20%; animation-delay: -10s;">Data Science</div>
-            <div class="floating-tag" style="bottom: 15%; right: 25%; animation-delay: -2s;">Big Data</div>
+            <div class="floating-tag hidden md:block" style="top: 20%; left: 15%; animation-delay: 0s;">Machine Learning</div>
+            <div class="floating-tag hidden md:block" style="top: 30%; right: 10%; animation-delay: -5s;">Artificial Intelligence</div>
+            <div class="floating-tag hidden md:block" style="bottom: 25%; left: 20%; animation-delay: -10s;">Data Science</div>
+            <div class="floating-tag hidden md:block" style="bottom: 15%; right: 25%; animation-delay: -2s;">Big Data</div>
             <div class="container mx-auto px-6 z-10">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="w-full md:w-1/3 flex-shrink-0">
-                        <div class="glass-card profile-card-glow rounded-3xl p-8 text-center reveal">
-                            <img src="assets/Screenshot 2025-07-30 at 10.05.58 AM.png" alt="Shiva Sai Vummaji" class="w-48 h-48 rounded-full mx-auto mb-6 border-4 border-gray-700 shadow-lg">
+                        <div class="glass-card profile-card-glow rounded-3xl p-6 md:p-8 text-center reveal">
+                            <img src="assets/Screenshot 2025-07-30 at 10.05.58 AM.png" alt="Shiva Sai Vummaji" class="w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto mb-6 border-4 border-gray-700 shadow-lg">
                             <div class="space-y-4">
                                 <a href="https://www.linkedin.com/in/shiva-sai-vummaji/" class="flex items-center justify-center gap-3 text-lg text-gray-300 hover:text-sky-300 transition-colors duration-300">
                                     <i class="fab fa-linkedin w-6"></i><span>LinkedIn</span>
@@ -198,11 +193,11 @@
                         </div>
                     </div>
                     <div class="w-full md:w-2/3 text-center md:text-left">
-                        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 reveal"><span class="main-accent-text">Shiva Sai Vummaji</span></h1>
-                        <p class="text-xl md:text-2xl text-gray-300 font-medium mb-6 h-8 reveal">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 reveal"><span class="main-accent-text">Shiva Sai Vummaji</span></h1>
+                        <p class="text-lg md:text-xl text-gray-300 font-medium mb-6 h-8 reveal">
                            <span id="typing-text"></span><span class="typing-cursor"></span>
                         </p>
-                        <p class="text-lg text-gray-400 max-w-2xl mx-auto md:mx-0 mb-8 reveal">Turning data into decisions—using code, context, and curiosity to drive insight, impact, and innovation.</p>
+                        <p class="text-base md:text-lg text-gray-400 max-w-2xl mx-auto md:mx-0 mb-8 reveal">Turning data into decisions—using code, context, and curiosity to drive insight, impact, and innovation.</p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start reveal">
                             <a href="#projects" class="magnetic-button px-8 py-3 rounded-lg font-semibold text-white main-accent-bg hover:opacity-90 transition-all duration-300 transform hover:scale-105">View My Projects</a>
                             <a href="#experience" class="magnetic-button px-8 py-3 rounded-lg font-semibold text-gray-200 bg-gray-800/80 border border-gray-700 hover:bg-gray-700/80 hover:border-sky-400 transition-all duration-300 transform hover:scale-105">View My Experience</a>
@@ -212,14 +207,13 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="py-24 bg-black/20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 reveal">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Driven by <span class="gradient-text">Data</span>, Powered by <span class="gradient-text">Innovation</span></h2>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Driven by <span class="gradient-text">Data</span>, Powered by <span class="gradient-text">Innovation</span></h2>
                 </div>
                 <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="lg:w-1/2 text-lg text-gray-300 leading-relaxed reveal">
+                    <div class="lg:w-1/2 text-base md:text-lg text-gray-300 leading-relaxed reveal">
                         <p>I am a senior at Purdue University pursuing a triple major in Computer Science, Data Science, and Applied Statistics, and a minor in Business Economics. I specialize in applying advanced machine learning and deep learning techniques to transform complex, large-scale datasets into actionable insights. I am currently putting this into practice as a Data Science and AI Intern at EXL Service, focusing on the healthcare analytics sector. In addition to my studies, I serve as a Teaching Assistant for Introduction to Data Science, Data Structures & Algorithms, and Managerial Economics, where I help guide students through core concepts in the respective fields.</p>
                     </div>
                     <div class="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -232,43 +226,39 @@
             </div>
         </section>
 
-        <!-- Professional Experience Section -->
         <section id="experience" class="py-24 bg-black/20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-20 reveal">
-                    <h2 class="text-4xl md:text-5xl font-bold"><span class="gradient-text">Professional Experience</span></h2>
+                     <h2 class="text-3xl md:text-5xl font-bold"><span class="gradient-text">Professional Experience</span></h2>
                 </div>
                 <div class="timeline">
-                    <div class="timeline-container left reveal"><div class="timeline-content glass-card p-6 rounded-xl"><h3 class="text-xl font-bold text-white">Data Science & AI Intern</h3><p class="text-sky-300 font-semibold mb-2">EXL SERVICE - ANALYTICS HEALTHCARE</p><p class="text-sm text-gray-400 mb-4">Jun 2025 - Present</p><ul class="list-disc list-inside text-gray-300 space-y-2 text-left"><li>Processed medical records with PySpark for large-scale healthcare analytics.</li><li>Constructed heterogeneous graph with 10k+ nodes & 4M+ edges for complex medical relationships.</li><li>Trained a Graph Neural Network with a custom loss function for downstream business tasks.</li></ul></div></div>
-                    <div class="timeline-container right reveal"><div class="timeline-content glass-card p-6 rounded-xl"><h3 class="text-xl font-bold text-white">AI Researcher</h3><p class="text-sky-300 font-semibold mb-2">SERIS AIM LAB</p><p class="text-sm text-gray-400 mb-4">Aug 2024 - Jun 2025</p><ul class="list-disc list-inside text-gray-300 space-y-2 text-left"><li>Implemented an AI pipeline for audio-to-video generation using cutting-edge technologies.</li><li>Integrated Librosa, OpenAI API, Stable Diffusion, and AnimateDiff for powerful video creation.</li><li>Evaluated video dynamics with OpenCV, Optical Flow, and clustering.</li></ul></div></div>
-                    <div class="timeline-container left reveal"><div class="timeline-content glass-card p-6 rounded-xl"><h3 class="text-xl font-bold text-white">Financial Data Analytics Intern</h3><p class="text-sky-300 font-semibold mb-2">EXL SERVICE - FINANCE CONSULTING</p><p class="text-sm text-gray-400 mb-4">Jul - Aug 2024</p><ul class="list-disc list-inside text-gray-300 space-y-2 text-left"><li>Analyzed complex financial datasets to identify optimization opportunities.</li><li>Proposed 26+ process improvements for enhanced operational and financial efficiency.</li><li>Created comprehensive visualizations and supported a digital transformation strategy.</li></ul></div></div>
-                    <div class="timeline-container right reveal"><div class="timeline-content glass-card p-6 rounded-xl"><h3 class="text-xl font-bold text-white">Teaching Assistant</h3><p class="text-sky-300 font-semibold mb-2">PURDUE UNIVERSITY</p><p class="text-sm text-gray-400 mb-4">Aug 2024 - Present</p><ul class="list-disc list-inside text-gray-300 space-y-2 text-left"><li>Leading labs and office hours for Data Science, DSA, and Economics courses.</li><li>Mentoring students in advanced programming concepts and analytical methodologies.</li></ul></div></div>
-                    <div class="timeline-container left reveal"><div class="timeline-content glass-card p-6 rounded-xl"><h3 class="text-xl font-bold text-white">Data Science Researcher</h3><p class="text-sky-300 font-semibold mb-2">CDC - THE DATA MINE</p><p class="text-sm text-gray-400 mb-4">Aug 2022 - May 2023</p><ul class="list-disc list-inside text-gray-300 space-y-2 text-left"><li>Explored comprehensive NIH datasets using R for public health insights.</li><li>Created 8+ impactful visualizations for health policy research.</li><li>Presented findings to 500+ attendees at multiple symposiums.</li></ul></div></div>
+                    <div class="timeline-container left reveal"><div class="timeline-content glass-card p-6 rounded-xl"><h3 class="text-xl font-bold text-white">Data Science & AI Intern</h3><p class="text-sky-300 font-semibold mb-2">EXL SERVICE - ANALYTICS HEALTHCARE</p><p class="text-sm text-gray-400 mb-4">Jun 2025 - Present</p><ul class="list-disc list-inside text-gray-300 space-y-2 text-left text-sm md:text-base"><li>Processed medical records with PySpark for large-scale healthcare analytics.</li><li>Constructed heterogeneous graph with 10k+ nodes & 4M+ edges for complex medical relationships.</li><li>Trained a Graph Neural Network with a custom loss function for downstream business tasks.</li></ul></div></div>
+                    <div class="timeline-container right reveal"><div class="timeline-content glass-card p-6 rounded-xl"><h3 class="text-xl font-bold text-white">AI Researcher</h3><p class="text-sky-300 font-semibold mb-2">SERIS AIM LAB</p><p class="text-sm text-gray-400 mb-4">Aug 2024 - Jun 2025</p><ul class="list-disc list-inside text-gray-300 space-y-2 text-left text-sm md:text-base"><li>Implemented an AI pipeline for audio-to-video generation using cutting-edge technologies.</li><li>Integrated Librosa, OpenAI API, Stable Diffusion, and AnimateDiff for powerful video creation.</li><li>Evaluated video dynamics with OpenCV, Optical Flow, and clustering.</li></ul></div></div>
+                    <div class="timeline-container left reveal"><div class="timeline-content glass-card p-6 rounded-xl"><h3 class="text-xl font-bold text-white">Financial Data Analytics Intern</h3><p class="text-sky-300 font-semibold mb-2">EXL SERVICE - FINANCE CONSULTING</p><p class="text-sm text-gray-400 mb-4">Jul - Aug 2024</p><ul class="list-disc list-inside text-gray-300 space-y-2 text-left text-sm md:text-base"><li>Analyzed complex financial datasets to identify optimization opportunities.</li><li>Proposed 26+ process improvements for enhanced operational and financial efficiency.</li><li>Created comprehensive visualizations and supported a digital transformation strategy.</li></ul></div></div>
+                    <div class="timeline-container right reveal"><div class="timeline-content glass-card p-6 rounded-xl"><h3 class="text-xl font-bold text-white">Teaching Assistant</h3><p class="text-sky-300 font-semibold mb-2">PURDUE UNIVERSITY</p><p class="text-sm text-gray-400 mb-4">Aug 2024 - Present</p><ul class="list-disc list-inside text-gray-300 space-y-2 text-left text-sm md:text-base"><li>Leading labs and office hours for Data Science, DSA, and Economics courses.</li><li>Mentoring students in advanced programming concepts and analytical methodologies.</li></ul></div></div>
+                    <div class="timeline-container left reveal"><div class="timeline-content glass-card p-6 rounded-xl"><h3 class="text-xl font-bold text-white">Data Science Researcher</h3><p class="text-sky-300 font-semibold mb-2">CDC - THE DATA MINE</p><p class="text-sm text-gray-400 mb-4">Aug 2022 - May 2023</p><ul class="list-disc list-inside text-gray-300 space-y-2 text-left text-sm md:text-base"><li>Explored comprehensive NIH datasets using R for public health insights.</li><li>Created 8+ impactful visualizations for health policy research.</li><li>Presented findings to 500+ attendees at multiple symposiums.</li></ul></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="py-24">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 reveal">
-                    <h2 class="text-4xl md:text-5xl font-bold">Projects That <span class="gradient-text">Make an Impact</span></h2>
+                    <h2 class="text-3xl md:text-5xl font-bold">Projects That <span class="gradient-text">Make an Impact</span></h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project Card 1 -->
                     <div class="glass-card p-6 rounded-xl flex flex-col reveal project-card">
-                        <h3 class="text-2xl font-bold text-white mb-3">QuantEdge: AI-Powered Financial Forecasting (Ongoing)</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-3">QuantEdge: AI-Powered Financial Forecasting (Ongoing)</h3>
                         <p class="text-gray-400 mb-4 flex-grow">End-to-end S&P 500 analysis using XGBoost, LSTM, Transformers. Integrated with FinBERT sentiment analysis.</p>
                         <div class="flex flex-wrap gap-2 mb-4"><span class="skill-pill skill-pill-teal">XGBoost</span><span class="skill-pill skill-pill-sky">LSTM</span><span class="skill-pill skill-pill-violet">Transformers</span><span class="skill-pill skill-pill-teal">FinBERT</span><span class="skill-pill skill-pill-sky">FastAPI</span></div>
                         <div class="flex justify-between items-center text-white mb-4">
-                            <div><span class="text-3xl font-bold"><span class="metric-counter" data-target="500">0</span>+</span><p class="text-sm text-gray-400">S&P Companies</p></div>
-                            <div><span class="text-3xl font-bold"><span class="metric-counter" data-target="1206376">0</span>+</span><p class="text-sm text-gray-400">Data Points</p></div>
+                            <div><span class="text-2xl md:text-3xl font-bold"><span class="metric-counter" data-target="500">0</span>+</span><p class="text-sm text-gray-400">S&P Companies</p></div>
+                            <div><span class="text-2xl md:text-3xl font-bold"><span class="metric-counter" data-target="1206376">0</span>+</span><p class="text-sm text-gray-400">Data Points</p></div>
                         </div>
                         <a href="https://github.com/ShivaSaiV/Stock-Market-Analysis" class="mt-auto text-center w-full py-2 px-4 rounded-lg font-semibold text-sky-300 border-2 border-sky-400 hover:bg-sky-400 hover:text-black transition-colors duration-300">View Code &rarr;</a>
                     </div>
-                    <!-- Project Card 2 -->
                     <div class="glass-card p-6 rounded-xl flex flex-col reveal project-card">
-                        <h3 class="text-2xl font-bold text-white mb-3">Applied Machine Learning</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Applied Machine Learning</h3>
                         <ul class="text-gray-400 mb-4 flex-grow list-disc list-inside space-y-2">
                             <li>Comparative analysis of linear regression and neural networks for modeling hourly wages using CPS microdata.</li>
                             <li>Evaluation of multiple classifiers for the prediction of patient diabetes risk from health data.</li>
@@ -278,51 +268,44 @@
                             <span class="skill-pill skill-pill-teal">Python</span><span class="skill-pill skill-pill-sky">Scikit-learn</span><span class="skill-pill skill-pill-violet">Neural Networks</span><span class="skill-pill skill-pill-teal">Random Forest</span><span class="skill-pill skill-pill-sky">XGBoost</span>
                         </div>
                         <div class="flex justify-between items-center text-white mb-4">
-                            <div><span class="text-3xl font-bold"><span class="metric-counter" data-target="258409">0</span>+</span><p class="text-sm text-gray-400">CPS Records</p></div>
-                            <div><span class="text-3xl font-bold"><span class="metric-counter" data-target="12">0</span></span><p class="text-sm text-gray-400">ML Models</p></div>
+                            <div><span class="text-2xl md:text-3xl font-bold"><span class="metric-counter" data-target="258409">0</span>+</span><p class="text-sm text-gray-400">CPS Records</p></div>
+                            <div><span class="text-2xl md:text-3xl font-bold"><span class="metric-counter" data-target="12">0</span></span><p class="text-sm text-gray-400">ML Models</p></div>
                         </div>
                         <a href="https://github.com/ShivaSaiV/Machine-Learning" class="mt-auto text-center w-full py-2 px-4 rounded-lg font-semibold text-sky-300 border-2 border-sky-400 hover:bg-sky-400 hover:text-black transition-colors duration-300">View Code &rarr;</a>
                     </div>
-                    <!-- Project Card 3 -->
-                     <div class="glass-card p-6 rounded-xl flex flex-col reveal project-card">
-                        <h3 class="text-2xl font-bold text-white mb-3">PTM Naming Consistency Analysis</h3>
-                        <ul class="text-gray-400 mb-4 flex-grow list-disc list-inside space-y-2">Pipeline for detecting and classifying naming inconsistencies across pre-trained models on HuggingFace.
-                        </ul>
+                    <div class="glass-card p-6 rounded-xl flex flex-col reveal project-card">
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-3">PTM Naming Consistency Analysis</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">Pipeline for detecting and classifying naming inconsistencies across pre-trained models on HuggingFace.</p>
                         <div class="flex flex-wrap gap-2 mb-4"><span class="skill-pill skill-pill-teal">Gemma</span><span class="skill-pill skill-pill-sky">Netron</span><span class="skill-pill skill-pill-violet">HuggingFace</span><span class="skill-pill skill-pill-teal">LLM</span></div>
                         <div class="flex justify-between items-center text-white mb-4">
-                            <div><span class="text-3xl font-bold"><span class="metric-counter" data-target="7600">0</span>+</span><p class="text-sm text-gray-400">Models</p></div>
-                            <div><span class="text-3xl font-bold"><span class="metric-counter" data-target="5">0</span>+</span><p class="text-sm text-gray-400">Pipelines</p></div>
+                            <div><span class="text-2xl md:text-3xl font-bold"><span class="metric-counter" data-target="7600">0</span>+</span><p class="text-sm text-gray-400">Models</p></div>
+                            <div><span class="text-2xl md:text-3xl font-bold"><span class="metric-counter" data-target="5">0</span>+</span><p class="text-sm text-gray-400">Pipelines</p></div>
                         </div>
                         <a href="assets/Pre_Trained_Model_Naming_Convention.pdf" class="mt-auto text-center w-full py-2 px-4 rounded-lg font-semibold text-sky-300 border-2 border-sky-400 hover:bg-sky-400 hover:text-black transition-colors duration-300">View Report &rarr;</a>
                     </div>
-                    <!-- Project Card 4 -->
                     <div class="glass-card p-6 rounded-xl flex flex-col reveal project-card">
-                        <h3 class="text-2xl font-bold text-white mb-3">FastOrg: Natural-Language Driven CRM</h3>
-                         <ul class="text-gray-400 mb-4 flex-grow list-disc list-inside space-y-2">Streamlined CRM platform built to replace complex software, featuring DeepConsole that leverages OpenAI's API to translate natural language into database queries for efficient member management.
-                        </ul>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-3">FastOrg: Natural-Language Driven CRM</h3>
+                         <p class="text-gray-400 mb-4 flex-grow">Streamlined CRM platform built to replace complex software, featuring DeepConsole that leverages OpenAI's API to translate natural language into database queries for efficient member management.</p>
                         <div class="flex flex-wrap gap-2 mb-4"><span class="skill-pill skill-pill-teal">OpenAI API</span><span class="skill-pill skill-pill-sky">MQL</span><span class="skill-pill skill-pill-violet">CRM</span><span class="skill-pill skill-pill-teal">NLP</span><span class="skill-pill skill-pill-sky">FastAPI</span></div>
                         <a href="https://github.com/Triangle-Hackers/FastOrg" class="mt-auto text-center w-full py-2 px-4 rounded-lg font-semibold text-sky-300 border-2 border-sky-400 hover:bg-sky-400 hover:text-black transition-colors duration-300">View Code &rarr;</a>
                     </div>
-                    <!-- Project Card 5 -->
-                     <div class="glass-card p-6 rounded-xl flex flex-col reveal project-card">
-                        <h3 class="text-2xl font-bold text-white mb-3">ImBoard: iOS Social App</h3>
+                    <div class="glass-card p-6 rounded-xl flex flex-col reveal project-card">
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-3">ImBoard: iOS Social App</h3>
                         <p class="text-gray-400 mb-4 flex-grow">User-friendly iOS app, featuring account management, content interaction (viewing, posting, saving), and customizable settings aimed at improving user experience.</p>
                         <div class="flex flex-wrap gap-2 mb-4"><span class="skill-pill skill-pill-teal">Swift</span><span class="skill-pill skill-pill-sky">Firebase</span><span class="skill-pill skill-pill-violet">Xcode</span></div>
                         <div class="flex justify-between items-center text-white mb-4">
-                            <div><span class="text-3xl font-bold"><span class="metric-counter" data-target="500">0</span>+</span><p class="text-sm text-gray-400">Users</p></div>
-                            <div><span class="text-3xl font-bold"><span class="metric-counter" data-target="103">0</span>+</span><p class="text-sm text-gray-400">Instagram Followers</p></div>
+                            <div><span class="text-2xl md:text-3xl font-bold"><span class="metric-counter" data-target="500">0</span>+</span><p class="text-sm text-gray-400">Users</p></div>
+                            <div><span class="text-2xl md:text-3xl font-bold"><span class="metric-counter" data-target="103">0</span>+</span><p class="text-sm text-gray-400">Instagram Followers</p></div>
                         </div>
                         <a href="https://apps.apple.com/us/app/huddle-social/id6449878483" class="mt-auto text-center w-full py-2 px-4 rounded-lg font-semibold text-sky-300 border-2 border-sky-400 hover:bg-sky-400 hover:text-black transition-colors duration-300">View App &rarr;</a>
                     </div>
-                    <!-- Project Card 6 -->
                     <div class="glass-card p-6 rounded-xl flex flex-col reveal project-card">
-                        <h3 class="text-2xl font-bold text-white mb-3">Netflix Insights: A Data-Driven Analysis</h3>
-                        <ul class="text-gray-400 mb-4 flex-grow list-disc list-inside space-y-2">In-depth statistical analysis of the Netflix titles, employing R for multiple linear regression, correlation analysis, and t-tests to model viewer preferences and identify significant content trends.
-                        </ul>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Netflix Insights: A Data-Driven Analysis</h3>
+                         <p class="text-gray-400 mb-4 flex-grow">In-depth statistical analysis of the Netflix titles, employing R for multiple linear regression, correlation analysis, and t-tests to model viewer preferences and identify significant content trends.</p>
                         <div class="flex flex-wrap gap-2 mb-4"><span class="skill-pill skill-pill-teal">R</span><span class="skill-pill skill-pill-sky">RStudio</span><span class="skill-pill skill-pill-violet">T-Tests</span><span class="skill-pill skill-pill-teal">Regression</span></div>
                         <div class="flex justify-between items-center text-white mb-4">
-                            <div><span class="text-3xl font-bold"><span class="metric-counter" data-target="10000">0</span>+</span><p class="text-sm text-gray-400">TV Shows & Movies</p></div>
-                            <div><span class="text-3xl font-bold"><span class="metric-counter" data-target="5">0</span>+</span><p class="text-sm text-gray-400">Analyses</p></div>
+                            <div><span class="text-2xl md:text-3xl font-bold"><span class="metric-counter" data-target="10000">0</span>+</span><p class="text-sm text-gray-400">TV Shows & Movies</p></div>
+                            <div><span class="text-2xl md:text-3xl font-bold"><span class="metric-counter" data-target="5">0</span>+</span><p class="text-sm text-gray-400">Analyses</p></div>
                         </div>
                         <a href="assets/NetflixProject.pdf" class="mt-auto text-center w-full py-2 px-4 rounded-lg font-semibold text-sky-300 border-2 border-sky-400 hover:bg-sky-400 hover:text-black transition-colors duration-300">View Report &rarr;</a>
                     </div>
@@ -330,14 +313,12 @@
             </div>
         </section>
 
-        <!-- Technical Expertise Section -->
         <section id="expertise" class="py-24 bg-black/20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 reveal">
-                    <h2 class="text-4xl md:text-5xl font-bold"><span class="gradient-text">Technical Expertise</span></h2>
+                    <h2 class="text-3xl md:text-5xl font-bold"><span class="gradient-text">Technical Expertise</span></h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Programming Languages -->
                     <div class="glass-card p-6 rounded-xl reveal">
                         <h3 class="text-2xl font-bold text-white mb-6">Programming Languages</h3>
                         <div class="space-y-4">
@@ -364,7 +345,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- AI/ML Frameworks -->
                     <div class="glass-card p-6 rounded-xl reveal">
                         <h3 class="text-2xl font-bold text-white mb-6">AI/ML Frameworks</h3>
                          <div class="space-y-4">
@@ -390,14 +370,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- ML Techniques -->
                     <div class="glass-card p-6 rounded-xl reveal">
                         <h3 class="text-2xl font-bold text-white mb-6">ML Techniques</h3>
                         <div class="flex flex-wrap gap-3">
                             <span class="skill-pill">Deep Learning</span><span class="skill-pill">Neural Networks</span><span class="skill-pill">NLP</span><span class="skill-pill">Transformers</span><span class="skill-pill">GNNs</span><span class="skill-pill">RAG</span><span class="skill-pill">Random Forest</span><span class="skill-pill">XGBoost</span><span class="skill-pill">Time Series Analysis</span><span class="skill-pill">Clustering</span>
                         </div>
                     </div>
-                    <!-- Data & Tools -->
                     <div class="glass-card p-6 rounded-xl reveal">
                         <h3 class="text-2xl font-bold text-white mb-6">Data & Tools</h3>
                          <div class="flex flex-wrap gap-3">
@@ -408,55 +386,34 @@
             </div>
         </section>
 
-        <!-- Let's Connect Section -->
         <section id="connect" class="py-24">
              <div class="container mx-auto px-6">
                 <div class="text-center mb-16 reveal">
-                    <h2 class="text-4xl md:text-5xl font-bold"><span class="gradient-text">Let's Connect</span></h2>
-                    <p class="text-lg text-gray-400 mt-4 max-w-3xl mx-auto">Interested in AI/ML collaboration, full-time opportunities, or discussing innovative projects? I'd love to hear from you.</p>
+                    <h2 class="text-3xl md:text-5xl font-bold"><span class="gradient-text">Let's Connect</span></h2>
+                    <p class="text-base md:text-lg text-gray-400 mt-4 max-w-3xl mx-auto">Interested in AI/ML collaboration, full-time opportunities, or discussing innovative projects? I'd love to hear from you.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                    <!-- Email on the left -->
                     <a href="mailto:svummaj28@gmail.com" class="glass-card p-8 rounded-xl text-center reveal hover:!border-sky-400">
                         <i class="fas fa-envelope text-4xl main-accent-text mb-4"></i>
                         <h3 class="text-2xl font-bold text-white mb-2">Email Me</h3>
                         <p class="text-gray-400">Get in touch directly for collaborations and opportunities.</p>
                     </a>
 
-                    <!-- LinkedIn on the right -->
                     <a href="https://www.linkedin.com/in/shiva-sai-vummaji/" class="glass-card p-8 rounded-xl text-center reveal hover:!border-sky-400">
                         <i class="fab fa-linkedin text-4xl main-accent-text mb-4"></i>
                         <h3 class="text-2xl font-bold text-white mb-2">LinkedIn Profile</h3>
                         <p class="text-gray-400">Connect professionally and view my experience.</p>
                     </a>
                 </div>
-                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <!-- <div class="glass-card p-6 rounded-xl reveal">
-                        <i class="fas fa-check-circle text-2xl text-green-400 mb-3"></i>
-                        <h4 class="text-lg font-semibold text-white">Current Status</h4>
-                        <p class="text-gray-400">Seeking 2026 full-time opportunities. Open to research collaborations.</p>
-                    </div> -->
-                    <!-- <div class="glass-card p-6 rounded-xl reveal">
-                        <i class="fas fa-map-marker-alt text-2xl text-yellow-400 mb-3"></i>
-                        <h4 class="text-lg font-semibold text-white">Location</h4>
-                        <p class="text-gray-400">New York City Area</p>
-                    </div>
-                    <div class="glass-card p-6 rounded-xl reveal">
-                        <i class="fas fa-calendar-alt text-2xl text-purple-400 mb-3"></i>
-                        <h4 class="text-lg font-semibold text-white">Availability</h4>
-                        <p class="text-gray-400">Available for internships and project collaborations.</p>
-                    </div> -->
-                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-900/50 border-t border-gray-800">
         <div class="container mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="text-center md:text-left"><h4 class="text-xl font-bold text-white">Shiva Sai Vummaji</h4><p class="text-gray-400 max-w-sm mt-2">Aspiring Data Scientist & AI Engineer.</p></div>
-                <div class="flex gap-8">
+                <div class="flex flex-col sm:flex-row gap-8 sm:gap-16 text-center sm:text-left">
                     <div>
                         <h5 class="font-bold text-white mb-3">Quick Navigation</h5>
                         <ul class="space-y-2">
@@ -472,7 +429,6 @@
                             <li><a href="https://www.linkedin.com/in/shiva-sai-vummaji/" class="text-gray-400 hover:text-sky-300 transition-colors">LinkedIn</a></li>
                             <li><a href="https://github.com/ShivaSaiV" class="text-gray-400 hover:text-sky-300 transition-colors">GitHub</a></li>
                             <li><a href="mailto:svummaj28@gmail.com" class="text-gray-400 hover:text-sky-300 transition-colors">Email</a></li>
-                            <!-- <li><a href="ShivaResume.pdf" class="text-gray-400 hover:text-sky-300 transition-colors">Resume</a></li> -->
                         </ul>
                     </div>
                 </div>
@@ -484,7 +440,6 @@
         </div>
     </footer>
     
-    <!-- Vanilla-Tilt.js for 3D card effect -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
 
     <script>
@@ -518,6 +473,10 @@
                         // Animate Metric Counters
                         if (entry.target.classList.contains('metric-counter')) {
                             const counter = entry.target;
+                            // Check if counter has already been animated
+                            if (counter.dataset.animated) return;
+                            counter.dataset.animated = true; // Mark as animated
+
                             const target = +counter.getAttribute('data-target');
                             const duration = 2000;
                             let start = null;
@@ -526,11 +485,14 @@
                                 if (!start) start = timestamp;
                                 const progress = Math.min((timestamp - start) / duration, 1);
                                 const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-                                counter.innerText = Math.floor(easeOutCubic * target);
+                                const currentCount = Math.floor(easeOutCubic * target);
+                                // Format with commas for better readability
+                                counter.innerText = currentCount.toLocaleString();
+
                                 if (progress < 1) {
                                     window.requestAnimationFrame(step);
                                 } else {
-                                    counter.innerText = target;
+                                    counter.innerText = target.toLocaleString();
                                 }
                             };
                             window.requestAnimationFrame(step);
@@ -546,7 +508,10 @@
                             }, 100);
                         }
                         
-                        observer.unobserve(entry.target);
+                        // Stop observing once the animation is triggered
+                        if (!entry.target.classList.contains('metric-counter')) {
+                           observer.unobserve(entry.target);
+                        }
                     }
                 });
             };
@@ -580,16 +545,20 @@
 
             magneticButtons.forEach(button => {
                 button.addEventListener('mousemove', (e) => {
+                    // Don't apply effect on touch devices
+                    if (window.innerWidth < 768) return; 
                     const rect = button.getBoundingClientRect();
                     const x = e.clientX - rect.left - rect.width / 2;
                     const y = e.clientY - rect.top - rect.height / 2;
-                    button.style.transform = `translate(${x / (rect.width / magneticStrength)}px, ${y / (rect.height / magneticStrength)}px)`;
+                    button.style.transform = `translate(${x / (rect.width / magneticStrength)}px, ${y / (rect.height / magneticStrength)}px) scale(1.05)`;
                 });
                 button.addEventListener('mouseleave', () => {
-                    button.style.transform = 'translate(0,0)';
+                    if (window.innerWidth < 768) return;
+                    button.style.transform = 'translate(0,0) scale(1)';
                 });
             });
         });
     </script>
 </body>
 </html>
+```
